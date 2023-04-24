@@ -15,19 +15,17 @@ STEP 3 Apply Feature Transformation techniques to all the features of the data s
 STEP 4 Save the data to the file
 
 ## PROGRAM:
-```
-Name : DHARSHINI DS
-Register Number : 212221230022
-```
-```
+```python
+# Developed by Udayakumar R
+# Ref. No: 22008609
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from sklearn.preprocessing import QuantileTransformer
 import statsmodels.api as sm
 import scipy.stats as stats
-from sklearn.preprocessing import QuantileTransformer
-df=pd.read_csv("/content/Data_to_Transform.csv")
-df
+df=pd.read_csv("Data_to_Transform.csv")
 sm.qqplot(df.HighlyPositiveSkew,fit=True,line='45')
 plt.show()
 sm.qqplot(df.HighlyNegativeSkew,fit=True,line='45')
